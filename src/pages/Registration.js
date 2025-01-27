@@ -4,8 +4,20 @@ const Registration = () => {
 
     const [username, setUsername] = React.useState('')
     const [password, setPassword] = React.useState('')
-    function register(){
 
+    async function register(){
+        const responce = await fetch('http://localhost:4000/register', {
+            method: 'POST', 
+            headers: {'Content-Type': 'application/json'}, 
+            body: JSON.stringify({username, password})
+        })
+
+        if(responce == 200){
+            console.log("User Registered")
+        }
+        else{
+            console.log("User Not Registered")
+        }
     }
   return (
     <div>
