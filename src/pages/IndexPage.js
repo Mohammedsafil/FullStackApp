@@ -11,4 +11,4 @@ const indexPage = () => {
   )
 }
 
-export default indexPage
+export default indexPage;
