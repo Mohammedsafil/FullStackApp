@@ -7,7 +7,9 @@ const App = () => {
   return (
     <div>
       <Router>
+        <Routes>
         <Route path='/' element={<IndexPage />} />
+        </Routes>
       </Router>
     </div>
   )
